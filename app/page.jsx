@@ -1,52 +1,23 @@
-import Image from 'next/image'
-import Nav from '/components/Nav'
-import Nadebox from '/components/Nadebox'
+import Image from "next/image";
+import Nav from "/components/Nav";
+import Nadebox from "/components/Nadebox";
+import Sidebar from "@/components/Sidebar";
+import AccordionGrid from "@/components/AccordionGrid";
 
 export default function Home() {
   return (
-    <main className='main-content'>
-      <Nav />
-      {/* nh html no uls? */}
-      <div className='zone-container'>
-        <div className='main-grid-filter'>
-          <input type="checkbox" />
-        </div>
-        <h1 className='zone-category'>A SITE</h1>
-        <ul className='main-grid-container'>
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-          <Nadebox />
-        </ul>
-      </div>
+    <main className="main-content">
+      <Sidebar  />
+      <AccordionGrid />
     </main>
-//     <div className='main-container'>
-//     <main className='main-content'>
-//       <article className='main-page-content'>
-//         <h1 className='main-h1'>The Last Nade Index</h1>
-//         <h2 className='main-h2'>You Will Ever Need</h2>
-//       </article>
-//     </main>
-//   </div>
+    //     <div className='main-container'>
+    //     <main className='main-content'>
+    //       <article className='main-page-content'>
+    //         <h1 className='main-h1'>The Last Nade Index</h1>
+    //         <h2 className='main-h2'>You Will Ever Need</h2>
+    //       </article>
+    //     </main>
+    //   </div>
     // <main className={styles.main}>
     //   <div className={styles.description}>
     //     <p>
@@ -135,5 +106,5 @@ export default function Home() {
     //     </a>
     //   </div>
     // </main>
-  )
+  );
 }

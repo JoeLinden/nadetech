@@ -1,6 +1,8 @@
 function Nadebox() {
     return (
-        <li className="nadebox-container">Nadebox</li>
+        <div className="nadebox-container">
+            <span className="nadebox-content">Nadebox</span>
+        </div>
     )
 }
 export default Nadebox;

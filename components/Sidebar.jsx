@@ -4,7 +4,6 @@ import SidebarBreak from './SidebarBreak'
 export default function Sidebar() {
   return (
     <div className='sidebar'>
-      Sidebar
       {/* Ul... Li of buttons... */}
       <SidebarButton />
       <SidebarButton />
