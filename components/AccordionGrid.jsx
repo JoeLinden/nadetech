@@ -1,9 +1,105 @@
-import AccordionButton from "./AccordionButton";
+import AccordionHeader from "./AccordionHeader";
 import Nadebox from "./Nadebox";
 
 export default function AccordionGrid() {
   return (
     <div className="accordion-grid">
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
+      <Nadebox />
       <Nadebox />
       <Nadebox />
       <Nadebox />

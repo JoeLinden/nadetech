@@ -7,7 +7,8 @@ import AccordionGrid from "@/components/AccordionGrid";
 export default function Home() {
   return (
     <main className="main-content">
-      <Sidebar  />
+      <Sidebar />
+      <AccordionGrid />
       <AccordionGrid />
     </main>
     //     <div className='main-container'>
