@@ -1,18 +1,17 @@
 import SidebarButton from './SidebarButton'
-import SidebarBreak from './SidebarBreak'
 
 export default function Sidebar() {
   return (
-    <div className='sidebar'>
+    <div className='split-sidebar'>
       {/* Ul... Li of buttons... */}
       <SidebarButton />
       <SidebarButton />
-      <SidebarBreak />
+      <div className="sidebar-break">NADES</div>
       <SidebarButton />
       <SidebarButton />
       <SidebarButton />
       <SidebarButton />
-      <SidebarBreak />
+      <div className="sidebar-break">TWEAKS</div>
       <SidebarButton />
       <SidebarButton />
       <SidebarButton />
