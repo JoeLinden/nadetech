@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <main className="library">
       <Split />
-      <Split />
       {/* <Sidebar />
       <AccordionGrid />
       <AccordionGrid /> */}
