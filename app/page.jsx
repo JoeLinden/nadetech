@@ -2,7 +2,6 @@ import Image from "next/image";
 import Nav from "/components/Nav";
 import Nadebox from "/components/Nadebox";
 import Sidebar from "@/components/Sidebar";
-import AccordionGrid from "@/components/AccordionGrid";
 import Split from "/components/Split";
 
 export default function Home() {

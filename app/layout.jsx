@@ -5,7 +5,7 @@ import './globals.css'
 
 export const metadata = {
   title: 'Nade Tech',
-  description: 'Lineups Tech Tips',
+  description: 'Lineups, Tech, Tips',
 }
 
 export default function RootLayout({ children }) {

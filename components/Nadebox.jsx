@@ -1,26 +1,19 @@
 import Image from "next/image";
 
-function Nadebox() {
+function Nadebox({ thumbnail, alt }) {
   return (
     <div className="nadebox-container">
       <header className="nadebox-header"></header>
       <Image
-        src="/assets/clips/mirage/a_smoke_outside-a_stairs_thumbnail.png"
-        alt="Stair Smoke from Outside A"
         className={"nadebox-thumbnail"}
+        src={thumbnail}
+        alt={alt}
         fill={true}
         object-fit="contain"
-        quality={75}
+        quality={100}
+        priority
       />
-      <Image 
-        src="/assets/clips/mirage/a_smoke_outside-a_stairs_deadzone.png"
-        alt="Stair Smoke from Outside A"
-        className={"nadebox-deadzone"}
-        fill={true}
-        object-fill="contain"
-        quality={75}
-      />
-      <div className="nadebox-footer"></div>
+      <footer className="nadebox-footer"></footer>
     </div>
   );
 }
