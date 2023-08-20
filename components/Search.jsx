@@ -7,7 +7,7 @@ export default function Search() {
       <input type="text" name="query" id="query" />
       <button className="search-button" type="submit">
         <Image
-          src="assets/vercel.svg"
+          src="assets/search_400_24dp.svg"
           alt="Search icon"
           width={24}
           height={24}

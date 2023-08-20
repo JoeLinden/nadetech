@@ -2,23 +2,17 @@ import Image from "next/image";
 import Nav from "/components/Nav";
 import Nadebox from "/components/Nadebox";
 import Sidebar from "@/components/Sidebar";
-import AccordionGrid from "@/components/AccordionGrid";
+import Split from "/components/Split";
 
 export default function Home() {
   return (
-    <main className="main-content">
-      <Sidebar />
+    <main className="library">
+      <Split />
+      {/* <Sidebar />
       <AccordionGrid />
-      <AccordionGrid />
+      <AccordionGrid /> */}
     </main>
-    //     <div className='main-container'>
-    //     <main className='main-content'>
-    //       <article className='main-page-content'>
-    //         <h1 className='main-h1'>The Last Nade Index</h1>
-    //         <h2 className='main-h2'>You Will Ever Need</h2>
-    //       </article>
-    //     </main>
-    //   </div>
+
     // <main className={styles.main}>
     //   <div className={styles.description}>
     //     <p>
