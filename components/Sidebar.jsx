@@ -4,7 +4,7 @@ export default function Sidebar() {
   return (
     <div className='split-sidebar'>
       <ul>
-        <li><SidebarButton /></li>
+        <li><SidebarButton button="smoke" key="smoke"/></li>
         <li><SidebarButton /></li>
       </ul>
       <div className="sidebar-break">NADES</div>

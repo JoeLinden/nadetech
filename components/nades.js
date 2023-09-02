@@ -1,7 +1,7 @@
-export const nade = [
+export const Nades = [
     {
         id: 0,
-        title: "Stairs Smoke",
+        title: "z",
         origin: "outside-a",
         land: "stairs",
         map: "mirage",
@@ -12,7 +12,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/Nadebox.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/Nadebox.png",
+        video: "/assets/clips/mirage/a_smoke_outside-a_stairs_safezone.mp4"
     },
     {
         id: 1000,
@@ -27,7 +29,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "advanced",
-        thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png",
+        video: "/assets/clips/inferno/a_smoke_a-site_a-site.mp4"
     },
     {
         id: 1,
@@ -42,7 +46,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/Nadebox2.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/Nadebox2.png",
+        video: "/assets/clips/mirage/a_smoke_ramp_jungle.mp4"
     },
     {
         id: 2,
@@ -57,7 +63,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/inferno/a_molly_arch_a-site_thumb.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/inferno/a_molly_arch_a-site_thumb.png",
+        video: "/assets/clips/inferno/a_molly_arch_a-site.mp4"
     },
     {
         id: 3,
@@ -72,11 +80,13 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/Nadebox.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/Nadebox.png",
+        video: "/assets/clips/mirage/a_smoke_outside-a_stairs_safezone.mp4"
     },
     {
         id: 4,
-        title: "Stairs Smoke",
+        title: "z",
         origin: "outside-a",
         land: "stairs",
         map: "mirage",
@@ -87,7 +97,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png",
+        video: "/assets/clips/inferno/a_smoke_a-site_a-site.mp4"
     },
     {
         id: 5,
@@ -102,7 +114,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/Nadebox.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/Nadebox.png",
+        video: "/assets/clips/mirage/a_smoke_outside-a_stairs_safezone.mp4",
     },
     {
         id: 6,
@@ -117,7 +131,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/Nadebox.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/Nadebox.png",
+        video: "/assets/clips/mirage/a_smoke_outside-a_stairs_safezone.mp4"
     },
     {
         id: 7,
@@ -132,11 +148,13 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/inferno/a_molly_arch_a-site_thumb.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/inferno/a_molly_arch_a-site_thumb.png",
+        video: "/assets/clips/inferno/a_molly_arch_a-site.mp4"
     },
     {
         id: 8,
-        title: "Stairs Smoke",
+        title: "z",
         origin: "outside-a",
         land: "stairs",
         map: "mirage",
@@ -147,7 +165,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png",
+        video: "/assets/clips/inferno/a_smoke_a-site_a-site.mp4"
     },
     {
         id: 9,
@@ -162,7 +182,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/Nadebox.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/Nadebox.png",
+        video: "/assets/clips/mirage/a_smoke_outside-a_stairs_safezone.mp4"
     },
     {
         id: 10,
@@ -177,7 +199,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/inferno/a_molly_arch_a-site_thumb.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/inferno/a_molly_arch_a-site_thumb.png",
+        video: "/assets/clips/inferno/a_molly_arch_a-site.mp4"
     },
     {
         id: 11,
@@ -192,7 +216,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png",
+        video: "/assets/clips/inferno/a_smoke_a-site_a-site.mp4"
     },
     {
         id: 12,
@@ -207,7 +233,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/Nadebox.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/Nadebox.png",
+        video: "/assets/clips/mirage/a_smoke_outside-a_stairs_safezone.mp4"
     },
     {
         id: 111111,
@@ -222,7 +250,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/Nadebox.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/Nadebox.png",
+        video: "/assets/clips/mirage/a_smoke_outside-a_stairs_safezone.mp4"
     },
     {
         id: 1001,
@@ -237,10 +267,12 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "advanced",
-        thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png",
+        video: "/assets/clips/inferno/a_smoke_a-site_a-site.mp4"
     },
     {
-        id: 111,
+        id: 111145,
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -252,10 +284,12 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/Nadebox2.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/Nadebox2.png",
+        video: "/assets/clips/mirage/a_smoke_ramp_jungle.mp4"
     },
     {
-        id: 112,
+        id: 11275,
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -267,7 +301,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/inferno/a_molly_arch_a-site_thumb.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/inferno/a_molly_arch_a-site_thumb.png",
+        video: "/assets/clips/inferno/a_molly_arch_a-site.mp4"
     },
     {
         id: 113,
@@ -282,10 +318,12 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/Nadebox.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/Nadebox.png",
+        video: "/assets/clips/mirage/a_smoke_outside-a_stairs_safezone.mp4"
     },
     {
-        id: 114,
+        id: 11490,
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -297,10 +335,12 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png",
+        video: "/assets/clips/inferno/a_smoke_a-site_a-site.mp4"
     },
     {
-        id: 115,
+        id: 11580,
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -312,7 +352,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/Nadebox.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/Nadebox.png",
+        video: "/assets/clips/mirage/a_smoke_outside-a_stairs_safezone.mp4"
     },
     {
         id: 116,
@@ -327,7 +369,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/Nadebox.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/Nadebox.png",
+        video: "/assets/clips/mirage/a_smoke_outside-a_stairs_safezone.mp4"
     },
     {
         id: 17,
@@ -342,7 +386,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/inferno/a_molly_arch_a-site_thumb.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/inferno/a_molly_arch_a-site_thumb.png",
+        video: "/assets/clips/inferno/a_molly_arch_a-site.mp4"
     },
     {
         id: 18,
@@ -357,7 +403,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png",
+        video: "/assets/clips/inferno/a_smoke_a-site_a-site.mp4"
     },
     {
         id: 19,
@@ -372,11 +420,13 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/Nadebox.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/Nadebox.png",
+        video: "/assets/clips/mirage/a_smoke_outside-a_stairs_safezone.mp4"
     },
     {
         id: 110,
-        title: "Stairs Smoke",
+        title: "zzzy",
         origin: "outside-a",
         land: "stairs",
         map: "mirage",
@@ -387,7 +437,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/inferno/a_molly_arch_a-site_thumb.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/inferno/a_molly_arch_a-site_thumb.png",
+        video: "/assets/clips/inferno/a_molly_arch_a-site.mp4"
     },
     {
         id: 111,
@@ -402,7 +454,9 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png",
+        video: "/assets/clips/inferno/a_smoke_a-site_a-site.mp4"
     },
     {
         id: 112,
@@ -417,8 +471,10 @@ export const nade = [
         movement: "no",
         difficulty: "easy",
         collection: "essential",
-        thumbnail: "/assets/clips/Nadebox.png"
+        alt: "temporary",
+        thumbnail: "/assets/clips/Nadebox.png",
+        video: "/assets/clips/mirage/a_smoke_outside-a_stairs_safezone.mp4"
     },
 ];
 
-export default nade;
+export default Nades;

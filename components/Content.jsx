@@ -1,13 +1,12 @@
 import Nadebox from "/components/Nadebox";
-import { nade } from "./nades.js";
+import { Nades } from "./Nades.js";
 
-// Map an array of JSX Nadeboxes and pass every prop from the original nade object
-const nades = nade.map(nade => 
-  <Nadebox {...nade} key={nade.id} />
-);
-
-export default function Content() {
+export default function Content({ query }) {
   return (
-    <div className="split-content">{nades}</div>
+    <div className="split-content">
+      {Nades.filter(nade => nade.title.toLowerCase().includes(query)).map((nade) => (
+        <Nadebox {...nade} key={nade.id} />
+      ))}
+    </div>
   );
 }
