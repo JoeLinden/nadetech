@@ -1,6 +1,7 @@
 export const Nades = [
     {
         id: 0,
+        type: "smoke",
         title: "z",
         origin: "outside-a",
         land: "stairs",
@@ -18,6 +19,7 @@ export const Nades = [
     },
     {
         id: 1000,
+        type: "smoke",
         title: "A Site Smoke",
         origin: "a-site",
         land: "a-site",
@@ -31,10 +33,11 @@ export const Nades = [
         collection: "advanced",
         alt: "temporary",
         thumbnail: "/assets/clips/inferno/a_smoke_a-site_a-site_thumbnail.png",
-        video: "/assets/clips/inferno/a_smoke_a-site_a-site.mp4"
+        video: "/assets/clips/inferno/a_smoke_a-site_a-site.mp4",
     },
     {
         id: 1,
+        type: "smoke",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -52,6 +55,7 @@ export const Nades = [
     },
     {
         id: 2,
+        type: "molly",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -69,6 +73,7 @@ export const Nades = [
     },
     {
         id: 3,
+        type: "smoke",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -86,6 +91,7 @@ export const Nades = [
     },
     {
         id: 4,
+        type: "smoke",
         title: "z",
         origin: "outside-a",
         land: "stairs",
@@ -103,6 +109,7 @@ export const Nades = [
     },
     {
         id: 5,
+        type: "smoke",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -120,6 +127,7 @@ export const Nades = [
     },
     {
         id: 6,
+        type: "smoke",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -137,6 +145,7 @@ export const Nades = [
     },
     {
         id: 7,
+        type: "molly",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -154,6 +163,7 @@ export const Nades = [
     },
     {
         id: 8,
+        type: "smoke",
         title: "z",
         origin: "outside-a",
         land: "stairs",
@@ -171,6 +181,7 @@ export const Nades = [
     },
     {
         id: 9,
+        type: "smoke",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -188,7 +199,8 @@ export const Nades = [
     },
     {
         id: 10,
-        title: "Stairs Smoke",
+        type: "molly",
+        title: "A Site Molly",
         origin: "outside-a",
         land: "stairs",
         map: "mirage",
@@ -205,6 +217,7 @@ export const Nades = [
     },
     {
         id: 11,
+        type: "smoke",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -222,6 +235,7 @@ export const Nades = [
     },
     {
         id: 12,
+        type: "smoke",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -239,6 +253,7 @@ export const Nades = [
     },
     {
         id: 111111,
+        type: "smoke",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -256,6 +271,7 @@ export const Nades = [
     },
     {
         id: 1001,
+        type: "smoke",
         title: "A Site Smoke",
         origin: "a-site",
         land: "a-site",
@@ -273,6 +289,7 @@ export const Nades = [
     },
     {
         id: 111145,
+        type: "smoke",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -290,6 +307,7 @@ export const Nades = [
     },
     {
         id: 11275,
+        type: "molly",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -324,6 +342,7 @@ export const Nades = [
     },
     {
         id: 11490,
+        type: "smoke",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -341,6 +360,7 @@ export const Nades = [
     },
     {
         id: 11580,
+        type: "smoke",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -358,6 +378,7 @@ export const Nades = [
     },
     {
         id: 116,
+        type: "smoke",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -375,6 +396,7 @@ export const Nades = [
     },
     {
         id: 17,
+        type: "molly",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -392,6 +414,7 @@ export const Nades = [
     },
     {
         id: 18,
+        type: "smoke",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -409,6 +432,7 @@ export const Nades = [
     },
     {
         id: 19,
+        type: "smoke",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -426,6 +450,7 @@ export const Nades = [
     },
     {
         id: 110,
+        type: "molly",
         title: "zzzy",
         origin: "outside-a",
         land: "stairs",
@@ -443,6 +468,7 @@ export const Nades = [
     },
     {
         id: 111,
+        type: "smoke",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",
@@ -460,6 +486,7 @@ export const Nades = [
     },
     {
         id: 112,
+        type: "smoke",
         title: "Stairs Smoke",
         origin: "outside-a",
         land: "stairs",

@@ -1,10 +1,10 @@
 import Nadebox from "/components/Nadebox";
-import { Nades } from "./Nades.js";
 
-export default function Content({ query }) {
+// Filter
+export default function Content({ results }) {
   return (
     <div className="split-content">
-      {Nades.filter(nade => nade.title.toLowerCase().includes(query)).map((nade) => (
+      {results.map((nade) => (
         <Nadebox {...nade} key={nade.id} />
       ))}
     </div>

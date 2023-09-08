@@ -1,25 +1,16 @@
 import SidebarButton from './SidebarButton'
 
-export default function Sidebar() {
+export default function Sidebar({ onClick, sidebarData }) {
   return (
     <div className='split-sidebar'>
-      <ul>
-        <li><SidebarButton button="smoke" key="smoke"/></li>
-        <li><SidebarButton /></li>
-      </ul>
-      <div className="sidebar-break">NADES</div>
-      <ul>
-        <li><SidebarButton /></li>
-        <li><SidebarButton /></li>
-        <li><SidebarButton /></li>
-        <li><SidebarButton /></li>
-      </ul>
-      <div className="sidebar-break">TWEAKS</div>
-      <ul>
-        <li><SidebarButton /></li>
-        <li><SidebarButton /></li>
-        <li><SidebarButton /></li>
-      </ul>
+      {sidebarData.map((button, index) => (
+        <SidebarButton 
+          key={index} 
+          index={index}
+          button={button}
+          onClick={onClick}
+        />
+      ))}
     </div>
   )
 }

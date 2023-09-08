@@ -5,8 +5,8 @@ export default function Header({ onType }) {
     return (
         <header className="split-header">
             <Search onType={onType}/>
-            <span>COLLECTIONS</span>
-            <nav>FILTERS</nav>
+            <h1>COLLECTIONS</h1>
+            <h1>FILTERS</h1>
         </header>
     )
 }

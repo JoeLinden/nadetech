@@ -5,14 +5,15 @@ export default function Search({ onType }) {
   return (
     <form className="top-nav-search-form" action="" role="search">
       <input
-        type="text"
+        type="search"
         placeholder="Search"
         name="query"
         id="query"
         className="search-input"
         onChange={onType}
       />
-      <button className="search-button" type="submit">
+      {/* Obey Filters Toggle */}
+      <button className="search-button" type="toggle">
         <Image
           src="assets/search_400_24dp.svg"
           alt="Search icon"
