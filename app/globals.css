@@ -145,6 +145,8 @@ a {
 
   color:rgb(255, 145, 0);
   font-size: 0.75rem;
+  z-index: 10;
+  margin-top: 5px;
 }
 .split-sidebar{
   grid-area: sidebar;
@@ -283,6 +285,51 @@ a {
   border-color: #E38616;
   min-height: 36px;
   min-width: 36px;
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+}
+.dropdown-button{
+  min-width: content;
+  min-height: 36px;
+  background-color:rgb(21, 21, 25);
+  border-radius: 8px;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-style: none;
+  border: 0px;
+  border-bottom: 1px solid;
+  border-color: #E38616;
+  box-shadow: inset 0px -6px 10px rgba(255, 153, 0, 0.084);
+}
+.dropdown ul {
+  display: block;
+  position: absolute;
+  top: 43px;
+  left: 0;
+  z-index: -1;
+  background-color: #e38716de;
+  filter: drop-shadow(0 0 0.65rem rgba(0, 0, 0, 0.448));
+  border: 0px;
+  list-style-type: none;
+  padding: 0;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+}
+.dropdown li {
+  padding: 8px;
+}
+.dropdown li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
 }
 /* || General styles (body, p, h1, h2, ul, ol, links...)*/
 

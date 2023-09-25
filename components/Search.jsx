@@ -12,16 +12,6 @@ export default function Search({ onType }) {
         className="search-input"
         onChange={onType}
       />
-      {/* Obey Filters Toggle */}
-      <button className="search-button" type="toggle">
-        <Image
-          src="assets/search_400_24dp.svg"
-          alt="Search icon"
-          width={24}
-          height={24}
-          className="search-button-icon"
-        />
-      </button>
     </form>
   );
 }
