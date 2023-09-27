@@ -36,34 +36,29 @@ export const SidebarData = [
     },
     {
         id: 7,
-        type: "tickrate",
-        state: "any",
-    },
-    {
-        id: 8,
         type: "side",
         state: "any",
     },
     {
-        id: 9,
+        id: 8,
         type: "pro",
         state: false,
     },
-    {
-        id: 10,
-        type: "boosts",
-        state: true,
-    },
-    {
-        id: 11,
-        type: "jumps",
-        state: true,
-    },
-    {
-        id: 12,
-        type: "wallbangs",
-        state: true,
-    }
+    // {
+    //     id: 10,
+    //     type: "boosts",
+    //     state: true,
+    // },
+    // {
+    //     id: 11,
+    //     type: "jumps",
+    //     state: true,
+    // },
+    // {
+    //     id: 12,
+    //     type: "wallbangs",
+    //     state: true,
+    // }
 ]
 
 export default SidebarData;

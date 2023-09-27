@@ -4,6 +4,8 @@ export default function Dropdown({ title, options, multiSelect, onSelect }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(multiSelect ? [] : "");
 
+
+
   const handleSelect = (option) => {
     if (multiSelect) {
       setSelected((prev) => {
@@ -26,8 +28,8 @@ export default function Dropdown({ title, options, multiSelect, onSelect }) {
         <ul>
           {options.map((option) => (
             <li key={option}>
-              <button onClick={() => handleSelect(option)}>
-                {option} {multiSelect && selected.includes(option) && "✅"}
+              <button className="dropdown-option" onClick={() => handleSelect(option)}>
+                {multiSelect ? (selected.includes(option) ? "❌" : "✅") : (selected.includes(option) ? "✅" : "❌")} {option} 
               </button>
             </li>
           ))}

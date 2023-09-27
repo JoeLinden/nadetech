@@ -2,38 +2,33 @@ import Search from "./Search";
 import Dropdown from "./Dropdown";
 import { useState } from "react";
 
-export default function Header({ onType, mapOptions, handleMapSelect }) {
-    const collectionOptions = ['Essentials', 'Retake', 'One-Way', 'Lurk', 'Cross-Map', '+ Add Your Own'];
-    const [selectedCollections, setSelectedCollections] = useState([...collectionOptions]);
-    
-    const handleCollectionSelect = (collection) => {
-        console.log("", collection);
-    }
-    
-    const handleSortSelect = (sort) => {
-        console.log("", sort);
-    }
+export default function Header({
+  onType,
+  mapOptions,
+  collectionOptions,
+  onMapSelect,
+  onCollectionSelect,
+}) {
+  const handleSortSelect = (sort) => {
+    console.log("", sort);
+  };
 
   return (
     <header className="split-header">
-      <Dropdown 
+      <Dropdown
         title="Maps"
         options={mapOptions}
         multiSelect={true}
-        onSelect={handleMapSelect}
+        onSelect={onMapSelect}
+        className="maps-dropdown"
       />
       <Search onType={onType} />
-      <Dropdown 
+      <Dropdown
         title="Collections"
         options={collectionOptions}
-        multiSelect={false}
-        onSelect={handleCollectionSelect}
-      />
-      <Dropdown 
-        title="Sort"
-        options={['Top', 'New']}
-        multiSelect={false}
-        onSelect={handleSortSelect}
+        multiSelect={true}
+        onSelect={onCollectionSelect}
+        className="collections-dropdown"
       />
     </header>
   );
