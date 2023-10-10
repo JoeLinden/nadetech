@@ -202,13 +202,16 @@ h1 {
 
   border-radius: 12px;
   border-bottom: 1px solid var(--primary-color);
-  box-shadow: 4px 2px 10px 1px rgba(0, 0, 0, 0.075);
 }
 .nadebox-header {
   grid-column: 1 / -1;
   grid-row: 1 / 2;
+  display: flex;
 
-  z-index: 2;
+  z-index: 4;
+  background-color: #111111;
+  opacity: 0.2;
+  color: white;
 }
 .nadebox-thumbnail {
   grid-column: 1 / -1;
@@ -225,8 +228,11 @@ h1 {
 .nadebox-footer {
   grid-column: 1 / -1;
   grid-row: 3 / 4;
-
-  z-index: 2;
+  display: flex;
+  z-index: 4;
+  color: white;
+  background-color: #111111;
+  opacity: 0.2;
 }
 .nadebox-lineup {
   z-index: 100;

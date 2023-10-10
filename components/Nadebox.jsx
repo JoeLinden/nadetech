@@ -26,7 +26,9 @@ function Nadebox({ thumbnail, alt, video, lineup }) {
       onMouseOut={handleMouseOut}
       onClick={handleClick}
     >
-      <header className="nadebox-header"></header>
+      <header className="nadebox-header">
+        Nade Title, Nade Type, From Nade Origin
+      </header>
       <Image
           className={"nadebox-thumbnail"}
           // Render null instead of an empty string if there is no thumbnail
@@ -53,10 +55,12 @@ function Nadebox({ thumbnail, alt, video, lineup }) {
         src={lineup}
         alt="Lineup"
         height={80}
-        width={120}
+        width={116}
         quality={80}
       />
-      <footer className="nadebox-footer"></footer>
+      <footer className="nadebox-footer">
+        Stars, Side, Precision, Click, Movement, Technique
+      </footer>
     </div>
   );
 }
