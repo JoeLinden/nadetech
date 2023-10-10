@@ -15,6 +15,7 @@ export const Nades = [
         difficulty: "easy",
         collection: "essential",
         alt: "temporary",
+        lineup: "/assets/clips/nuke/outside_smoke_t-spawn_outside_cross_near_lineup.png",
         thumbnail: "/assets/clips/nuke/outside_smoke_t-spawn_outside_cross_near_thumb.png",
         video: "/assets/clips/nuke/outside_smoke_t-spawn_outside_cross_near.mp4"
     },
@@ -34,7 +35,8 @@ export const Nades = [
         collection: "essential",
         alt: "temporary",
         thumbnail: "/assets/clips/nuke/outside_smoke_t-spawn_outside_cross_far_thumb.png",
-        video: "/assets/clips/nuke/outside_smoke_t-spawn_outside_cross_far.mp4"
+        video: "/assets/clips/nuke/outside_smoke_t-spawn_outside_cross_far.mp4",
+        lineup: "/assets/clips/nuke/outside_smoke_t-spawn_outside_cross_far_lineup.png",
     },
     {
         id: 9465,
@@ -51,8 +53,9 @@ export const Nades = [
         difficulty: "easy",
         collection: "essential",
         alt: "temporary",
+        lineup: "/assets/clips/nuke/outside_smoke_t-spawn_outside_front-mini_lineup.png",
         thumbnail: "/assets/clips/nuke/outside_smoke_t-spawn_outside_front-mini_thumb.png",
-        video: "/assets/clips/nuke/outside_smoke_t-spawn_outside_front-mini.mp4"
+        video: "/assets/clips/nuke/outside_smoke_t-spawn_outside_front-mini.mp4",
     },
     {
         id: 9466,
@@ -87,6 +90,7 @@ export const Nades = [
         difficulty: "easy",
         collection: "essential",
         alt: "temporary",
+        lineup: "/assets/clips/nuke/outside_molly_fence_glaive_lineup.png",
         thumbnail: "/assets/clips/nuke/outside_molly_fence_glaive_thumb.png",
         video: "/assets/clips/nuke/outside_molly_fence_glaive.mp4"
     },

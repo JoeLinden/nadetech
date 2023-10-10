@@ -6,6 +6,8 @@ import SidebarData from "./SidebarData.js";
 import { useState } from "react";
 import { Nades } from "./Nades.js";
 
+import { Profiler } from "react";
+
 const alias = {
   molotov: "molly",
   incendiary: "molly",
@@ -30,9 +32,23 @@ const collectionOptions = [
   "cross-map",
 ];
 
+// TO
+
 // Search aliases
 function translateQuery(query) {
   return alias[query.toLowerCase()] || query;
+}
+
+function onRenderCallback(
+  id,
+  phase,
+  actualDuration,
+  baseDuration,
+  startTime,
+  commitTime,
+  interactions
+) {
+  console.log(id, phase, actualDuration, startTime, commitTime, interactions);
 }
 
 export default function Split() {
@@ -94,7 +110,7 @@ export default function Split() {
     });
   };
 
-  // FILTERS ===================================================
+  // FILTERS ============================== ~1ms processing time
   const searchFilter = (nades) => {
     return nades.filter(
       (nade) =>
@@ -108,37 +124,26 @@ export default function Split() {
   };
 
   const sidebarFilter = (nades) => {
-    // No changes to sidebar, skip filtering
-    if (JSON.stringify(sidebar) === JSON.stringify(SidebarData)) { return nades }
     return nades.filter((nade) =>
       sidebar.some(
         ({ type, state }) =>
-          // Filter out nade types if the respective button is false
+          // Type Filter | Filter out nade types if the respective button is false
           type === nade.type 
           && state !== false
-          // Filter CT, T, or Any side from results
+          // Side Filter | Filter CT, T, or Any side from results
           && (sidebar[7].state === nade.side || sidebar[7].state === "any")
-          // Only show pro nades if the button is enabled, otherwise show everything
+          // Pro Filter  | Only show pro nades if the button is enabled, otherwise show everything
           && (sidebar[8].state === nade.pro || nade.pro === true)
       )
     );
   };
 
   const mapFilter = (nades) => {
-    // All maps selected, skip filtering
-    if (JSON.stringify(selectedMaps) === JSON.stringify(mapOptions)) {
-      return nades;
-    }
     return nades.filter((nade) => selectedMaps.includes(nade.map));
   };
 
   const collectionFilter = (nades) => {
-    // All collections selected, skip filtering
-    if (JSON.stringify(selectedCollections) === JSON.stringify(collectionOptions)) {
-      return nades;
-    }
-    return nades.filter((nade) =>
-      selectedCollections.includes(nade.collection)
+    return nades.filter((nade) => selectedCollections.includes(nade.collection)
     );
   };
 
@@ -152,13 +157,11 @@ export default function Split() {
         onType={(e) => setQuery(e.target.value)}
       />
       <Sidebar onClick={handleClick} sidebarData={sidebar} />
+      <Profiler id="Content" onRender={onRenderCallback}>
       <Content
-        results={mapFilter(
-          collectionFilter(
-            sidebarFilter(
-              searchFilter(Nades)))
-        )}
+        results={mapFilter(collectionFilter(sidebarFilter(searchFilter(Nades))))}
       />
+      </Profiler>
     </div>
   );
 }
