@@ -6,7 +6,7 @@ export default function Content({ results }) {
     <div className="split-content">
       {results.length < 1 
       ? (<h1>No Nades Found</h1>) 
-      : (results.map((nade) => <Nadebox {...nade} key={nade.id} />))}
+      : (results.map((nade) => <Nadebox {...nade} key={nade.id} nade={nade}/>))}
     </div>
   );
 }

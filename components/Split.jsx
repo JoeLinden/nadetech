@@ -6,8 +6,6 @@ import SidebarData from "./SidebarData.js";
 import { useState } from "react";
 import { Nades } from "./Nades.js";
 
-import { Profiler } from "react";
-
 const alias = {
   molotov: "molly",
   incendiary: "molly",
@@ -157,11 +155,9 @@ export default function Split() {
         onType={(e) => setQuery(e.target.value)}
       />
       <Sidebar onClick={handleClick} sidebarData={sidebar} />
-      <Profiler id="Content" onRender={onRenderCallback}>
       <Content
         results={mapFilter(collectionFilter(sidebarFilter(searchFilter(Nades))))}
       />
-      </Profiler>
     </div>
   );
 }

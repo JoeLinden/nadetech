@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-function Nadebox({ thumbnail, alt, video, lineup }) {
+function Nadebox({ thumbnail, alt, video, lineup, nade }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -27,22 +27,22 @@ function Nadebox({ thumbnail, alt, video, lineup }) {
       onClick={handleClick}
     >
       <header className="nadebox-header">
-        Nade Title, Nade Type, From Nade Origin
+        {nade.land} {nade.type}
+        <br />
+        From {nade.origin}
       </header>
       <Image
           className={"nadebox-thumbnail"}
-          // Render null instead of an empty string if there is no thumbnail
           src={thumbnail}
           alt={alt}
           fill={true}
           object-fit="contain"
-          quality={80}
+          quality={100}
           priority
       />
       {isPlaying && (
         <video
           className={"nadebox-video"}
-          // Render null instead of an empty string if there is no video
           src={video}
           muted={true}
           autoPlay={true}
@@ -56,10 +56,10 @@ function Nadebox({ thumbnail, alt, video, lineup }) {
         alt="Lineup"
         height={80}
         width={116}
-        quality={80}
+        quality={100}
       />
       <footer className="nadebox-footer">
-        Stars, Side, Precision, Click, Movement, Technique
+        Side: {nade.side} Precision, Click, Movement: {nade.movement} Technique: {nade.technique} Pro: {nade.pro} Collection?
       </footer>
     </div>
   );
