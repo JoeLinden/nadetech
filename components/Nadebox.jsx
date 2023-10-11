@@ -19,6 +19,58 @@ function Nadebox({ thumbnail, alt, video, lineup, nade }) {
     setIsExpanded(!isExpanded);
   };
 
+  function renderNadeboxNav(nade) {
+    function checkSide(nade) {
+      switch (nade.side) {
+        case "t":
+          return "T";
+        case "ct":
+          return (<Image 
+            src="/assets/icons/de_inferno_icon.webp"
+            alt="T"
+            height={25}
+            width={25}
+            quality={100}
+          />);
+        default:
+          return "ANY";
+      }
+    }
+    function checkTechnique(nade) {
+      switch (nade.technique) {
+        case "left":
+          return "Left";
+        case "right":
+          return "Right";
+        case "middle":
+          return "Middle";
+        case "left-jump":
+          return "Left Jump";
+        case "right-jump":
+          return "Right Jump";
+        case "middle-jump":
+          return "Middle Jump";
+        default:
+          return "left";
+      }
+    }
+    function checkPro(nade) {
+      switch (nade.pro) {
+        case true:
+          return "Pro";
+        case false:
+          return "Not Pro";
+        default:
+          return "Pro";
+      }
+    }
+    return (
+      <nav className="nadebox-nav">
+        {checkSide(nade)} | {checkTechnique(nade)} | {checkPro(nade)}
+      </nav>
+    );
+  }
+
   return (
     <div
       className="nadebox-container"
@@ -27,18 +79,19 @@ function Nadebox({ thumbnail, alt, video, lineup, nade }) {
       onClick={handleClick}
     >
       <header className="nadebox-header">
-        {nade.land} {nade.type}
-        <br />
-        From {nade.origin}
+        <span className="nadebox-title">
+          {nade.land} {nade.type} From {nade.origin}
+        </span>
+        {renderNadeboxNav(nade)}
       </header>
       <Image
-          className={"nadebox-thumbnail"}
-          src={thumbnail}
-          alt={alt}
-          fill={true}
-          object-fit="contain"
-          quality={100}
-          priority
+        className={"nadebox-thumbnail"}
+        src={thumbnail}
+        alt={alt}
+        fill={true}
+        object-fit="contain"
+        quality={100}
+        priority
       />
       {isPlaying && (
         <video
@@ -50,7 +103,7 @@ function Nadebox({ thumbnail, alt, video, lineup, nade }) {
           controls={false}
         />
       )}
-      <Image 
+      <Image
         className="nadebox-lineup"
         src={lineup}
         alt="Lineup"
@@ -58,9 +111,10 @@ function Nadebox({ thumbnail, alt, video, lineup, nade }) {
         width={116}
         quality={100}
       />
-      <footer className="nadebox-footer">
-        Side: {nade.side} Precision, Click, Movement: {nade.movement} Technique: {nade.technique} Pro: {nade.pro} Collection?
-      </footer>
+      {/* <footer className="nadebox-footer">
+        Side: {nade.side} Precision, Click, Movement: {nade.movement} Technique:{" "}
+        {nade.technique} Pro: {nade.pro} Collection?
+      </footer> */}
     </div>
   );
 }
