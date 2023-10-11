@@ -1,7 +1,11 @@
 import './globals.css'
-//import { Inter } from 'next/font/google'
+import { Kanit } from 'next/font/google'
 
-//const inter = Inter({ subsets: ['latin'] })
+const kanit = Kanit({
+  weight:  ['300', '500'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'Nade Tech',
@@ -10,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={kanit.className}>
       <body>
         {children}
       </body>
