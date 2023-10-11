@@ -23,35 +23,146 @@ function Nadebox({ thumbnail, alt, video, lineup, nade }) {
     function checkSide(nade) {
       switch (nade.side) {
         case "t":
-          return "T";
+          return (
+            <Image
+              src="/assets/icons/t.webp"
+              alt="T"
+              height={22}
+              width={22}
+              quality={100}
+            />
+          );
         case "ct":
-          return (<Image 
-            src="/assets/icons/de_inferno_icon.webp"
-            alt="T"
-            height={25}
-            width={25}
-            quality={100}
-          />);
+          return (
+            <Image
+              src="/assets/icons/ct.webp"
+              alt="T"
+              height={22}
+              width={22}
+              quality={100}
+            />
+          );
         default:
-          return "ANY";
+          return (
+            <Image
+              src="/assets/icons/any.png"
+              alt="T"
+              height={22}
+              width={22}
+              quality={100}
+            />
+          );
       }
     }
     function checkTechnique(nade) {
       switch (nade.technique) {
         case "left":
-          return "Left";
+          return (
+            <Image
+              className="tech"
+              src="/assets/icons/left.svg"
+              alt="T"
+              height={21}
+              width={21}
+              quality={100}
+            />
+          );
         case "right":
-          return "Right";
+          return (
+            <Image
+              className="tech"
+              src="/assets/icons/right.svg"
+              alt="T"
+              height={21}
+              width={21}
+              quality={100}
+            />
+          );
         case "middle":
-          return "Middle";
+          return (
+            <Image
+              className="tech"
+              src="/assets/icons/middle.svg"
+              alt="T"
+              height={21}
+              width={21}
+              quality={100}
+            />
+          );
         case "left-jump":
-          return "Left Jump";
+          return (
+            <div>
+              <Image
+                className="tech"
+                src="/assets/icons/left.svg"
+                alt="T"
+                height={21}
+                width={21}
+                quality={100}
+              />
+              <Image
+                className="tech"
+                src="/assets/icons/jump.svg"
+                alt="T"
+                height={21}
+                width={21}
+                quality={100}
+              />
+            </div>
+          );
         case "right-jump":
-          return "Right Jump";
+          return (
+            <div>
+              <Image
+                className="tech"
+                src="/assets/icons/right.svg"
+                alt="T"
+                height={21}
+                width={21}
+                quality={100}
+              />
+              <Image
+                className="tech"
+                src="/assets/icons/jump.svg"
+                alt="T"
+                height={21}
+                width={21}
+                quality={100}
+              />
+            </div>
+          );
         case "middle-jump":
-          return "Middle Jump";
+          return (
+            <div>
+              <Image
+                className="tech"
+                src="/assets/icons/middle.svg"
+                alt="T"
+                height={21}
+                width={21}
+                quality={100}
+              />
+              <Image
+                className="tech"
+                src="/assets/icons/jump.svg"
+                alt="T"
+                height={21}
+                width={21}
+                quality={100}
+              />
+            </div>
+          );
         default:
-          return "left";
+          return (
+            <Image
+              className="tech"
+              src="/assets/icons/left.svg"
+              alt="T"
+              height={21}
+              width={21}
+              quality={100}
+            />
+          );
       }
     }
     function checkPro(nade) {
@@ -66,7 +177,7 @@ function Nadebox({ thumbnail, alt, video, lineup, nade }) {
     }
     return (
       <nav className="nadebox-nav">
-        {checkSide(nade)} | {checkTechnique(nade)} | {checkPro(nade)}
+        {checkSide(nade)} {checkTechnique(nade)} {checkPro(nade)}
       </nav>
     );
   }

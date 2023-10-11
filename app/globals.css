@@ -222,8 +222,12 @@ input {
   padding-right: 10px;
 
   z-index: 4;
-  background-color: #00000022;
+  background-color: #00000036;
   backdrop-filter: blur(6px);
+  color: white;
+  text-shadow: #1111112c 1px 1px 1px;
+}
+.tech {
   color: white;
 }
 .nadebox-title {
@@ -257,7 +261,7 @@ input {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  border-radius: 14px;
+  border-radius: 8px;
   border-bottom: 1px solid var(--primary-color);
   box-shadow: 4px 2px 12px 2px hsla(180, 9%, 2%, 0.217);
   opacity: 92%;

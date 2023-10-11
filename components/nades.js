@@ -30,7 +30,7 @@ export const Nades = [
         side: "any",
         tick: "any",
         pro: true,
-        technique: "stand",
+        technique: "left-jump",
         movement: "no",
         difficulty: "easy",
         collection: "essential",
