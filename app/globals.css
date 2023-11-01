@@ -101,7 +101,7 @@ h1 {
 }
 button {
   font-family: "__Kanit_6d52ef";
-  font-weight: 500;
+  font-weight: 400;
 }
 input {
   font-family: "__Kanit_6d52ef";
@@ -201,7 +201,7 @@ input {
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 42px 5fr 42px;
+  grid-template-rows: 42px 1fr;
   flex: 1 1 auto;
 
   min-width: 350px;
@@ -214,27 +214,39 @@ input {
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   display: flex;
-  flex-flow: column wrap;
-  align-content: space-between;
-  justify-content: center;
-  padding-top: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   z-index: 4;
   background-color: #00000036;
   backdrop-filter: blur(6px);
   color: white;
   text-shadow: #1111112c 1px 1px 1px;
+  width: 100%;
 }
-.tech {
-  color: white;
+.nadebox-header > * {
+  white-space: nowrap; /* Prevents text and inline-level elements from wrapping */
+  overflow: hidden; /* Handles content overflow */
+  text-overflow: ellipsis; /* How overflowed content is signaled to users */
+}
+.idk {
+  align-self: center;
 }
 .nadebox-title {
   flex: 1 1 auto;
+  align-self: center;
+  margin-left: 12px;
 }
 .nadebox-nav {
   flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 12px;
+}
+.nn-left-jump {
+  display: flex;
+  align-items: center;
 }
 .nadebox-thumbnail {
   grid-column: 1 / -1;
@@ -257,7 +269,7 @@ input {
   background-color: #11111130;
 }
 .nadebox-lineup {
-  z-index: 100;
+  z-index: 4;
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -396,6 +408,7 @@ input {
   position: relative;
   display: inline-block;
   margin-right: 8px;
+  width: 250px;
 }
 .dropdown-button{
   min-width: content;
@@ -404,14 +417,16 @@ input {
   border-radius: 8px;
   color: rgb(255, 255, 255);
   font-size: 1rem;
-  padding-left: 12px;
+  padding-left: 20px;
   width: 100%;
+  width: 250px;
   height: 50px;
-  padding-right: 12px;
+  padding-right: 20px;
   border-style: none;
   border: 0px;
-  border-bottom: 1px solid;
+  border-bottom: 3px solid;
   border-color: #E38616;
+  border-top: 1px solid rgba(255, 255, 255, 0.339);
   box-shadow: inset 0px -6px 10px rgba(255, 153, 0, 0.084);
 }
 .dropdown-option {
@@ -468,6 +483,22 @@ input {
   padding-bottom: 15px;
   fill: var(--primary-color);
   list-style: none;
+}
+.steam-login-button {
+  min-width: content;
+  min-height: 36px;
+  background-color: #1b253f;
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  padding-left: 20px;
+  height: 50px;
+  padding-right: 20px;
+  border-style: none;
+  border: 0px;
+  border-bottom: 3px solid;
+  border-color: #0a0f19;
+  box-shadow: inset 0px -6px 10px rgba(255, 153, 0, 0.084);
 }
 /* || General styles (body, p, h1, h2, ul, ol, links...)*/
 

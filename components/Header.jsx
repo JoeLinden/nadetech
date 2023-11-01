@@ -1,6 +1,6 @@
 import Search from "./Search";
 import Dropdown from "./Dropdown";
-import { useState } from "react";
+import SteamLoginButton from "./SteamLoginButton";
 
 export default function Header({
   onType,
@@ -30,6 +30,7 @@ export default function Header({
         onSelect={onCollectionSelect}
         className="collections-dropdown"
       />
+      <SteamLoginButton />
     </header>
   );
 }

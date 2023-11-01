@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+import Favorite from "./Favorite";
+
 import { useState } from "react";
 
 function Nadebox({ thumbnail, alt, video, lineup, nade }) {
@@ -20,168 +22,115 @@ function Nadebox({ thumbnail, alt, video, lineup, nade }) {
   };
 
   function renderNadeboxNav(nade) {
-    function checkSide(nade) {
-      switch (nade.side) {
-        case "t":
-          return (
-            <Image
-              src="/assets/icons/t.webp"
-              alt="T"
-              height={22}
-              width={22}
-              quality={100}
-            />
-          );
-        case "ct":
-          return (
-            <Image
-              src="/assets/icons/ct.webp"
-              alt="T"
-              height={22}
-              width={22}
-              quality={100}
-            />
-          );
-        default:
-          return (
-            <Image
-              src="/assets/icons/any.png"
-              alt="T"
-              height={22}
-              width={22}
-              quality={100}
-            />
-          );
-      }
-    }
     function checkTechnique(nade) {
       switch (nade.technique) {
         case "left":
           return (
             <Image
-              className="tech"
               src="/assets/icons/left.svg"
               alt="T"
               height={21}
-              width={21}
+              width={18}
               quality={100}
             />
           );
         case "right":
           return (
             <Image
-              className="tech"
               src="/assets/icons/right.svg"
               alt="T"
               height={21}
-              width={21}
+              width={18}
               quality={100}
             />
           );
         case "middle":
           return (
             <Image
-              className="tech"
               src="/assets/icons/middle.svg"
               alt="T"
               height={21}
-              width={21}
+              width={18}
               quality={100}
             />
           );
         case "left-jump":
           return (
-            <div>
+            <span className="nn-left-jump">
               <Image
-                className="tech"
                 src="/assets/icons/left.svg"
                 alt="T"
                 height={21}
-                width={21}
+                width={18}
                 quality={100}
               />
               <Image
-                className="tech"
                 src="/assets/icons/jump.svg"
                 alt="T"
                 height={21}
-                width={21}
+                width={18}
                 quality={100}
               />
-            </div>
+            </span>
           );
         case "right-jump":
           return (
-            <div>
+            <span>
               <Image
-                className="tech"
                 src="/assets/icons/right.svg"
                 alt="T"
                 height={21}
-                width={21}
+                width={18}
                 quality={100}
               />
               <Image
-                className="tech"
                 src="/assets/icons/jump.svg"
                 alt="T"
                 height={21}
-                width={21}
+                width={18}
                 quality={100}
               />
-            </div>
+            </span>
           );
         case "middle-jump":
           return (
-            <div>
+            <span>
               <Image
-                className="tech"
                 src="/assets/icons/middle.svg"
                 alt="T"
                 height={21}
-                width={21}
+                width={18}
                 quality={100}
               />
               <Image
-                className="tech"
                 src="/assets/icons/jump.svg"
                 alt="T"
                 height={21}
-                width={21}
+                width={18}
                 quality={100}
               />
-            </div>
+            </span>
           );
         default:
           return (
             <Image
-              className="tech"
               src="/assets/icons/left.svg"
               alt="T"
               height={21}
-              width={21}
+              width={18}
               quality={100}
             />
           );
       }
     }
-    function checkPro(nade) {
-      switch (nade.pro) {
-        case true:
-          return "Pro";
-        case false:
-          return "Not Pro";
-        default:
-          return "Pro";
-      }
-    }
     return (
-      <nav className="nadebox-nav">
-        {checkSide(nade)} {checkTechnique(nade)} {checkPro(nade)}
-      </nav>
+      <span className="nadebox-nav">
+        {checkTechnique(nade)}
+      </span>
     );
   }
 
+  // TODO: Get the nade's ID after you finish migrating the database.
   return (
     <div
       className="nadebox-container"
@@ -193,7 +142,10 @@ function Nadebox({ thumbnail, alt, video, lineup, nade }) {
         <span className="nadebox-title">
           {nade.land} {nade.type} From {nade.origin}
         </span>
-        {renderNadeboxNav(nade)}
+          {renderNadeboxNav(nade)}
+          <Favorite 
+            videoID={nade.id}
+          />
       </header>
       <Image
         className={"nadebox-thumbnail"}
