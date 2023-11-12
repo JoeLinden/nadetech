@@ -4,7 +4,13 @@ import Sidebar from "/components/Sidebar";
 import Content from "/components/Content";
 import SidebarData from "./SidebarData.js";
 import { useState } from "react";
-import { Nades } from "./Nades.js";
+import Nades from "./nades.js";
+
+const sqlite3 = require("sqlite3").verbose();
+const db = new sqlite3.Database("./database.sqlite", (err) => {
+  if (err) return console.error(err.message);
+});
+
 
 const alias = {
   molotov: "molly",
@@ -29,8 +35,6 @@ const collectionOptions = [
   "lurk",
   "cross-map",
 ];
-
-// TO
 
 // Search aliases
 function translateQuery(query) {
@@ -109,6 +113,23 @@ export default function Split() {
   };
 
   // FILTERS ============================== ~1ms processing time
+  // const searchFilter = (query) => {
+  //   // const translatedQuery = translateQuery(query);
+  //   const sql = `
+  //     SELECT *
+  //     FROM videos
+  //     WHERE LOWER(alt) LIKE '%${query}%'
+  //     OR LOWER(end) LIKE '%${query}%'
+  //     OR LOWER(type) LIKE '%${query}%'
+  //     OR LOWER(map) LIKE '%${query}%'
+  //     OR LOWER(zone) LIKE '%${query}%'
+  //   `;
+  
+  //   db.all(sql, (err, rows) => {
+  //     if (err) return console.error(err.message);
+  //     return rows;
+  //   });
+  // };
   const searchFilter = (nades) => {
     return nades.filter(
       (nade) =>
@@ -152,12 +173,15 @@ export default function Split() {
         mapOptions={mapOptions}
         onCollectionSelect={handleCollectionSelect}
         collectionOptions={collectionOptions}
-        onType={(e) => setQuery(e.target.value)}
+        onType={(e) => setQuery(e.target.value.toLowerCase())}
       />
       <Sidebar onClick={handleClick} sidebarData={sidebar} />
       <Content
-        results={mapFilter(collectionFilter(sidebarFilter(searchFilter(Nades))))}
+        results={searchFilter(Nades)}
       />
+      {/* <Content
+        results={mapFilter(collectionFilter(sidebarFilter(searchFilter(Nades))))}
+      /> */}
     </div>
   );
 }
