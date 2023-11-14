@@ -4,7 +4,7 @@ import Sidebar from "/components/Sidebar";
 import Content from "/components/Content";
 import SidebarData from "./SidebarData.js";
 import { useState } from "react";
-import { Nades } from "./Nades.js";
+import { Nades } from "./nades.js";
 
 const alias = {
   molotov: "molly",
