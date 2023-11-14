@@ -1,7 +1,6 @@
 const express = require('express');
 const next = require('next');
 const passport = require('./passport'); // import passport
-const { db } = require('./db'); // import db connection
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const handleFavorites = require('./favorites');

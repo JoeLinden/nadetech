@@ -25,11 +25,5 @@
   },
   "devDependencies": {
     "@types/node": "^20.7.1"
-  },
-  "browser": {
-    "fs": false,
-    "os": false,
-    "path": false,
-    "child_process": false
   }
 }
