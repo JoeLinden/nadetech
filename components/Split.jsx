@@ -150,7 +150,7 @@ export default function Split() {
       />
       <Sidebar onClick={handleClick} sidebarData={sidebar} />
       <Content
-        results={mapFilter(collectionFilter(sidebarFilter(searchFilter(nades))))}
+        results={searchFilter(nades)}
       />
       {/* <Content
         results={mapFilter(collectionFilter(sidebarFilter(searchFilter(Nades))))}

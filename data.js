@@ -5,6 +5,8 @@ export async function fetchVideos() {
         const data = await sql`
             SELECT * 
             FROM videos`;
+        console.log("Data: ", data);
+        console.log("Data Rows: ", data.rows);
         return data.rows;
     } catch (error) {
         console.error("Database Error: ", error);
