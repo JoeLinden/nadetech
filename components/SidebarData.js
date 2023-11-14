@@ -36,7 +36,7 @@ export const SidebarData = [
     },
     {
         id: 7,
-        type: "side",
+        type: "team",
         state: "any",
     },
     {
