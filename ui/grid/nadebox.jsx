@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Favorite from "./Favorite";
+import Favorite from "./favorite";
 
 import { useState } from "react";
 
@@ -123,11 +123,7 @@ function Nadebox({ thumbnail, alt, video, lineup, nade }) {
           );
       }
     }
-    return (
-      <span className="nadebox-nav">
-        {checkTechnique(nade)}
-      </span>
-    );
+    return <span className="nadebox-nav">{checkTechnique(nade)}</span>;
   }
 
   // TODO: Get the nade's ID after you finish migrating the database.
@@ -142,10 +138,8 @@ function Nadebox({ thumbnail, alt, video, lineup, nade }) {
         <span className="nadebox-title">
           {nade.land} {nade.type} From {nade.origin}
         </span>
-          {renderNadeboxNav(nade)}
-          <Favorite 
-            videoID={nade.id}
-          />
+        {renderNadeboxNav(nade)}
+        <Favorite videoID={nade.id} />
       </header>
       <Image
         className={"nadebox-thumbnail"}

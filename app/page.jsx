@@ -1,13 +1,16 @@
 import Image from "next/image";
 import Nav from "/components/Nav";
 import Nadebox from "/components/Nadebox";
-import Sidebar from "@/components/Sidebar";
+import Sidebar from "@/ui/sidebar/Sidebar";
 import Split from "/components/Split";
+import { fetchVideos } from "/app/lib/data.js";
+
+const videos = await fetchVideos();
 
 export default function Home() {
   return (
     <main className="library">
-      <Split />
+      <Split videos={videos} />
       {/* <Sidebar />
       <AccordionGrid />
       <AccordionGrid /> */}

@@ -1,19 +1,9 @@
 "use client";
-import Header from "/components/Header";
-import Sidebar from "/components/Sidebar";
-import Content from "/components/Content";
-import SidebarData from "./SidebarData.js";
+import Header from "@/components/grid/header.jsx";
+import Sidebar from "@/components/grid/sidebar.jsx";
+import Content from "@/ui/grid/content.jsx";
+import SidebarData from "@/components/grid/sidebarData.js";
 import { useState } from "react";
-import { Nades } from "./nades.js";
-import { fetchVideos } from "@/data.js";
-// const db = new sqlite3.Database("./database.sqlite", (err) => {
-//   if (err) return console.error(err.message);
-// });
-
-// const { db } = require('./db');
-//import { db } from './db';
-
-const nades = await fetchVideos();
 
 const alias = {
   molotov: "molly",
@@ -43,7 +33,7 @@ function translateQuery(query) {
   return alias[query.toLowerCase()] || query;
 }
 
-export default function Split() {
+export default function Split({ videos }) {
   const [query, setQuery] = useState("");
   const [sidebar, setSidebar] = useState(SidebarData);
   const [selectedMaps, setSelectedMaps] = useState([...mapOptions]);
@@ -103,15 +93,15 @@ export default function Split() {
   };
 
   // FILTERS ============================== ~1ms processing time
-  const searchFilter = (nades) => {
-    return nades.filter(
+  const searchFilter = (videos) => {
+    return videos.filter(
       (nade) =>
-        nade.alt.toLowerCase().includes(query) 
-        || nade.finish.toLowerCase().includes(query) 
-        || nade.type.toLowerCase().includes(query)
-        || nade.map.toLowerCase().includes(query) 
-        || nade.zone.toLowerCase().includes(query)
-        || nade.type.includes(translateQuery(query)) // nade type aliases 
+        nade.alt.toLowerCase().includes(query) ||
+        nade.finish.toLowerCase().includes(query) ||
+        nade.type.toLowerCase().includes(query) ||
+        nade.map.toLowerCase().includes(query) ||
+        nade.zone.toLowerCase().includes(query) ||
+        nade.type.includes(translateQuery(query)) // nade type aliases
     );
   };
 
@@ -120,12 +110,12 @@ export default function Split() {
       sidebar.some(
         ({ type, state }) =>
           // Type Filter | Filter out nade types if the respective button is false
-          type === nade.type 
-          && state !== false
+          type === nade.type &&
+          state !== false &&
           // Side Filter | Filter CT, T, or Any side from results
-          && (sidebar[7].state === nade.team || sidebar[7].state === "any")
+          (sidebar[7].state === nade.team || sidebar[7].state === "any") &&
           // Pro Filter  | Only show pro nades if the button is enabled, otherwise show everything
-          && (sidebar[8].state === nade.pro || nade.pro === 1)
+          (sidebar[8].state === nade.pro || nade.pro === 1)
       )
     );
   };
@@ -135,7 +125,8 @@ export default function Split() {
   };
 
   const collectionFilter = (nades) => {
-    return nades.filter((nade) => selectedCollections.includes(nade.collection)
+    return nades.filter((nade) =>
+      selectedCollections.includes(nade.collection)
     );
   };
 
@@ -149,9 +140,8 @@ export default function Split() {
         onType={(e) => setQuery(e.target.value.toLowerCase())}
       />
       <Sidebar onClick={handleClick} sidebarData={sidebar} />
-      <Content
-        results={searchFilter(nades)}
-      />
+      {/* Suspense */}
+      <Content results={searchFilter(videos)} />
       {/* <Content
         results={mapFilter(collectionFilter(sidebarFilter(searchFilter(Nades))))}
       /> */}
