@@ -1,6 +1,6 @@
 export type Video = {
-  id: number;
-  type: string;
+  id: string;
+  nade: string;
   start: string;
   finish: string;
   zone: string;
@@ -14,4 +14,13 @@ export type Video = {
   lineup: string;
   thumbnail: string;
   video: string;
+};
+
+export type Favorite = {
+  steam_id: string;
+  video_id: string;
+};
+
+export type User = {
+  steam_id: string;
 };

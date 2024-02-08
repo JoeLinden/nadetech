@@ -1,11 +1,36 @@
-# Nade Tech
-This application offers a solution for the millions of Counter-Strike players that are bottlenecked by suboptimal implementations of utility discovery. 
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-### WIP DRAFT
-The idea behind the default Library view is to show you exactly what you need, if you know what to look for. Nade discovery mediums optimize the utility learning process.
+## Getting Started
 
-The default mode of the application is conceptually the same as YouTube's layout. A grid of thumbnails with .webm clips play on hover. 
+First, run the development server:
 
-The search function instantly filters out all irrelevant nades, comes from the instant utility lineup clips library sorted by popularity utility lineup .webm clips 
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-- A and they're primarily based on two conditions: If the user is   reinterpret how they intuitive way to visualize game-specific nade lineups by rendering the map and landing-spot of each nade in an isometric 3D view. Just click a spot to see the lineup! There's also a traditional grid format for the entire library of lineups with powerful filters.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
