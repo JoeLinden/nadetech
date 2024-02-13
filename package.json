@@ -10,9 +10,8 @@
   },
   "dependencies": {
     "@vercel/postgres": "^0.5.1",
-    "next": "14.0.4",
-    "next-auth": "^5.0.0-beta.4",
-    "next-auth-steam": "^0.1.5",
+    "next": "^14.0.4",
+    "next-auth-steam": "^0.2.0",
     "react": "^18",
     "react-dom": "^18"
   },

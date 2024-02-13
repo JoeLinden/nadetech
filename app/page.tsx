@@ -1,8 +1,14 @@
 import Header from "@/app/ui/header/header";
 import SideBar from "@/app/ui/sidebar/sidebar";
 import Nadebox from "@/app/ui/nadebox/nadebox";
+
+import { SignIn, SignOut } from "./ui/header/steam-login";
+import { getServerSession } from "next-auth";
+import { Fragment } from "react";
+
 import { fetchVideos } from "@/app/lib/data";
 import { filterVideos } from "@/app/lib/utils";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 export default async function Home({
   searchParams,
@@ -15,12 +21,29 @@ export default async function Home({
   const query = searchParams?.query || "";
   const filteredVideos = filterVideos(videos, query);
 
+  const session = await getServerSession();
+  //const { data } = useSession();
+
   return (
     <div className="home">
       <Header />
       <SideBar />
       <main className="content">
         Live Query: {query}
+        <br />
+        {/* Steam Login Stuff */}
+        <div>
+          {session ? (
+            <Fragment>
+              <p>Hi! 🧑‍🚀🚀</p>
+              <SignOut />
+            </Fragment>
+          ) : (
+            <Fragment>
+              Do you want to play with me? <SignIn />
+            </Fragment>
+          )}
+        </div>
         <br />
         Nadeboxes:
         {filteredVideos.map((video: any) => (

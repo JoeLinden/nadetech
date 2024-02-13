@@ -1,27 +1,29 @@
-// auth.js
-
-// nextauth.js
-import SteamProvider, { PROVIDER_ID } from "next-auth-steam";
-import NextAuth from "next-auth";
+import SteamProvider from "next-auth-steam";
+import NextAuth from "next-auth/next";
+import { PROVIDER_ID } from "next-auth-steam";
 
 import type { NextRequest } from "next/server";
-import { NextAuthConfig } from "next-auth";
 
-export function getAuthOptions(req: NextRequest): NextAuthConfig {
-  return {
-    providers: req
-      ? [
-          SteamProvider(req, {
-            clientSecret: process.env.STEAM_SECRET!,
-            callbackUrl: `${process.env.NEXTAUTH_URL}/api/auth/callback`,
-          }),
-        ]
-      : [],
+async function handler(
+  req: NextRequest,
+  ctx: { params: { nextauth: string[] } }
+) {
+  // @ts-ignore
+  return NextAuth(req, ctx, {
+    providers: [
+      SteamProvider(req, {
+        clientSecret: process.env.STEAM_SECRET!,
+        callbackUrl: "http://localhost:3000/api/auth/callback",
+      }),
+    ],
+    // the code documents itself i guess!
     callbacks: {
       jwt({ token, account, profile }) {
+        // Add the Steam profile information to the token
         if (account?.provider === PROVIDER_ID) {
           token.steam = profile;
         }
+
         return token;
       },
       session({ session, token }) {
@@ -29,18 +31,11 @@ export function getAuthOptions(req: NextRequest): NextAuthConfig {
           // @ts-expect-error
           session.user.steam = token.steam;
         }
+
         return session;
       },
     },
-  };
+  });
 }
 
-async function handler(
-  req: NextRequest,
-  ctx: { params: { nextauth: string[] } }
-) {
-  return NextAuth(req, res, getAuthOptions(req));
-}
-
-//export { handler as GET, handler as POST };
-export { GET, POST } from "@/app/lib/auth";
+export { handler as GET, handler as POST };
