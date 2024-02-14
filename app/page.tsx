@@ -8,7 +8,6 @@ import { Fragment } from "react";
 
 import { fetchVideos } from "@/app/lib/data";
 import { filterVideos } from "@/app/lib/utils";
-import { useSession, signIn, signOut } from "next-auth/react";
 
 export default async function Home({
   searchParams,
@@ -22,6 +21,7 @@ export default async function Home({
   const filteredVideos = filterVideos(videos, query);
 
   const session = await getServerSession();
+
   //const { data } = useSession();
 
   return (
@@ -35,7 +35,7 @@ export default async function Home({
         <div>
           {session ? (
             <Fragment>
-              <p>Hi! 🧑‍🚀🚀</p>
+              <p>Hi {session?.user?.name}! 🧑‍🚀🚀</p>
               <SignOut />
             </Fragment>
           ) : (
