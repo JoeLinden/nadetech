@@ -4,7 +4,7 @@ export default function Nadebox({ video }: { video: any }) {
   return (
     <div className="nadebox">
       {video.nade} | {video.start} | {video.finish} |
-      <Favorite videoID={video.id} />
+      <Favorite videoID={video.video_id} />
     </div>
   );
 }

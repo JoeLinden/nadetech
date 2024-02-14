@@ -3,7 +3,7 @@ import { useSession } from "next-auth/react";
 import { addFavorite } from "@/app/lib/utils";
 
 function getSteamId(session: any) {
-  return JSON.stringify(session.data.user.steam.steamid, null, 2);
+  return JSON.stringify(session.data.user.steam.steamid, null, 2).slice(1, -1);
 }
 
 export default function Favorite({ videoID }: { videoID: string }) {
