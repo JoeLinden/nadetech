@@ -1,6 +1,7 @@
 # Nadetech
 ![Screenshot of the home page of nadetech](https://github.com/JoeLinden/nadetech/assets/25034889/a2a9251e-ca7a-49b2-99f1-5a965a0481ea)
-A library of CS2 utility lineup videos with powerful filtering options to find exactly what you need as fast as possible.
+
+### A library of CS2 utility lineup videos with powerful filtering options to find exactly what you need as fast as possible.
 
 ## Features
 - Instant search results
