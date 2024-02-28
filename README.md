@@ -1,6 +1,6 @@
 # Nadetech
 ![Screenshot of the home page of Nadetech](https://github.com/JoeLinden/nadetech/assets/25034889/a2a9251e-ca7a-49b2-99f1-5a965a0481ea)
-(This current design/UI is just a placeholder)
+(This current UI design is just a placeholder)
 
 A library of CS2 utility lineup videos with powerful filtering options to find exactly what you need as fast as possible. Designed to be usable in-game.
 
