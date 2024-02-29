@@ -4,5 +4,5 @@ import { useState } from "react";
 const maps = [{ name: "Inferno" }];
 
 export default function SideBar() {
-  return <div>Sidebar</div>;
+  return <aside className="sidebar">Sidebar</aside>;
 }

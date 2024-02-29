@@ -10,7 +10,6 @@ export type Video = {
   movement: string;
   precision: string;
   collection: string;
-  alt: string;
   lineup: string;
   thumbnail: string;
   video: string;

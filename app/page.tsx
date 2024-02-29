@@ -29,8 +29,6 @@ export default async function Home({
       <Header />
       <SideBar />
       <main className="content">
-        Live Query: {query}
-        <br />
         {/* Steam Login Stuff */}
         <div>
           {session ? (
