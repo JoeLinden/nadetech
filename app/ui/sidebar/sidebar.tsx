@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Fragment } from "react";
 
 const maps = [
   { name: "Inferno" },
@@ -18,17 +19,32 @@ const nades = [
 ];
 const options = [{ name: "Favorites" }];
 const collections = [{ name: "Essentials" }];
-const teams = ["Any", "Terrorists", "Counter-Terrorists"];
+const teams = [
+  { name: "Any" },
+  { name: "Terrorists" },
+  { name: "Counter-Terrorists" },
+];
+
+function mapObjects(filters: Array<{ name: string }>, category: string) {
+  return (
+    <Fragment>
+      <h1 className="sidebar-label">{category}</h1>
+      {/* Map a filter category to the sidebar */}
+      {filters.map((filter) => {
+        return <h2 key={filter.name}>{filter.name}</h2>;
+      })}
+      <br />
+    </Fragment>
+  );
+}
 
 export default function SideBar() {
   return (
     <aside className="sidebar">
-      <h1 className="sidebar-label">Options</h1>
-      <br />
-      <h1 className="sidebar-label">Nades</h1>
-      <br />
-      <h1 className="sidebar-label">Maps</h1>
-      <br />
+      {mapObjects(options, "Options")}
+      {mapObjects(nades, "Nades")}
+      {mapObjects(maps, "Maps")}
+      {mapObjects(teams, "Teams")}
     </aside>
   );
 }
