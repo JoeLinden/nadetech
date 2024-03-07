@@ -105,7 +105,6 @@ a {
 
 h1 {
   color: rgb(255, 157, 0);
-  font-weight: 500;
   text-align: center;
 }
 
@@ -120,22 +119,28 @@ h1 {
   height: 100dvh; /* Fixes nav and sidebar */
   width: 100%;
 
-  background-color: rgb(16, 16, 16);
+  background-color: rgb(18, 18, 18);
 }
 
+/* Header */
 .header {
   grid-area: header;
-  background-color: rgb(22, 22, 22);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgb(18, 18, 18);
   border-bottom: rgb(26, 26, 26) 2px solid;
 }
-
-.sidebar {
-  grid-area: sidebar;
-
-  background-color: rgb(22, 22, 22);
-  border-right: rgb(26, 26, 26) 2px solid;
+.search-input {
+  padding: 100%;
+  background-color: rgb(20, 20, 20);
+  border-width: 1px;
+  border-color: orange;
 }
 
+/* Main Content */
 .content {
   overflow-y: auto; /* Enables scrolling */
   display: grid;
@@ -155,4 +160,41 @@ h1 {
   aspect-ratio: 16/11;
 
   border-radius: var(--border-radius);
+}
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  gap: 24px;
+  column-gap: 30px;
+
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 18px;
+  background-color: rgb(18, 18, 18);
+  border-right: rgb(26, 26, 26) 2px solid;
+}
+.sidebar-section {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.sidebar-label {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+.sidebar-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: var(--border-radius);
+  border-color: rgb(19, 19, 19);
+  border-width: 2px;
+  background-color: rgb(20, 20, 20);
+  color: rgb(255, 255, 255);
+  transition: background-color 0.2s ease;
 }

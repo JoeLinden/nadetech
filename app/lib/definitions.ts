@@ -23,3 +23,13 @@ export type Favorite = {
 export type User = {
   steam_id: string;
 };
+
+export type Options = {
+  name: string;
+  state: boolean;
+};
+
+export type SidebarData = {
+  name: string;
+  state: boolean;
+};
