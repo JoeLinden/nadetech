@@ -28,3 +28,29 @@ export const teams = [
   { name: "Terrorists", state: false },
   { name: "Counter-Terrorists", state: false },
 ];
+
+export const sidebarFilters = {
+  Options: {
+    Favorites: false,
+  },
+  Nades: {
+    Smokes: true,
+    Grenades: true,
+    Molotovs: true,
+    Flashbangs: true,
+  },
+  Maps: {
+    Ancient: true,
+    Anubis: true,
+    Inferno: true,
+    Mirage: true,
+    Nuke: true,
+    Overpass: true,
+    Vertigo: true,
+  },
+  Teams: {
+    Any: true,
+    Terrorists: false,
+    CounterTerrorists: false,
+  },
+};

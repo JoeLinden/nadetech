@@ -2,7 +2,7 @@ import { QueryResultRow } from "@vercel/postgres";
 import { getServerSession } from "next-auth";
 import { sql } from "@vercel/postgres";
 
-// Filter the videos in-memory to eliminate DB queries.
+// Filter the videos in-memory to minimize DB queries and their delay.
 export function filterVideos(videos: any, query: string) {
   return videos.filter(
     (video: any) =>

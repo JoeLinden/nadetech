@@ -158,8 +158,9 @@ h1 {
 
   min-width: 350px;
   aspect-ratio: 16/11;
-
-  border-radius: var(--border-radius);
+}
+.nadebox-thumbnail {
+  border-radius: 18px;
 }
 
 /* Sidebar */
@@ -186,7 +187,7 @@ h1 {
   font-size: 1rem;
   margin-bottom: 6px;
 }
-.sidebar-button {
+.toggle-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,4 +198,8 @@ h1 {
   background-color: rgb(20, 20, 20);
   color: rgb(255, 255, 255);
   transition: background-color 0.2s ease;
+}
+.toggle-button.on {
+  background-color: rgb(255, 157, 0);
+  color: rgb(18, 18, 18);
 }
